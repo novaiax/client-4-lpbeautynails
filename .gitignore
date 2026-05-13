@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Source images (only the renamed/used versions are kept in /images/)
+/image/
+
+# Logs
+*.log
+npm-debug.log*
