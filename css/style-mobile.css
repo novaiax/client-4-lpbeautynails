@@ -1173,7 +1173,7 @@ ul, ol{ list-style: none; }
   .values-grid{ grid-template-columns: 1fr 1fr; gap: 24px; }
 
   .gallery-grid{ grid-template-columns: repeat(3, 1fr); }
-  .gallery-grid-page{ grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid-page{ grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .gallery-item-wide{ grid-column: span 2; }
 
   .loyalty-grid{ grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }

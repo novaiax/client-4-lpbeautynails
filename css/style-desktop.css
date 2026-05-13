@@ -164,8 +164,10 @@
   gap: 16px;
 }
 .gallery-grid-page{
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
+.gallery-grid-page .gallery-item{ aspect-ratio: 4/3; }
 .gallery-item-tall{ grid-row: span 2; }
 .gallery-item-wide{ grid-column: span 2; }
 
