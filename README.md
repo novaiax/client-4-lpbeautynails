@@ -22,8 +22,8 @@ HTML5 + CSS3 (variables, grid, flexbox) + JavaScript vanilla. Pas de dépendance
 
 ## Réservation
 
-Plateforme : Square Appointments
-- RDV : https://app.squareup.com/appointments/book/3dwwcpdk2mj73t/LDWZXSW84ZJ0S/start
+Plateforme : Cal.com (plan Free)
+- RDV : https://www.cal.eu/lpbeautynails
 
 ## Formulaire de contact
 
