@@ -1,0 +1,63 @@
+# ============================================================
+# LP Beauty Nails - Optimisations serveur (Apache)
+# Additif et sans risque : compression, cache, types MIME,
+# en-tetes de securite. Ignore silencieusement par les hebergeurs
+# non-Apache (Nginx, GitHub Pages...).
+# ============================================================
+
+# ---- Types MIME images modernes (au cas ou non declares) ----
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
+</IfModule>
+
+# ---- Compression (gzip) ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---- Cache navigateur ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Images / polices : cache long (assets versionnes par le contenu)
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/avif              "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/svg+xml           "access plus 1 year"
+  ExpiresByType image/x-icon            "access plus 1 year"
+  # CSS / JS : cache moyen
+  ExpiresByType text/css                "access plus 1 month"
+  ExpiresByType application/javascript  "access plus 1 month"
+  # HTML : revalidation courte (le contenu peut changer)
+  ExpiresByType text/html               "access plus 1 hour"
+</IfModule>
+
+# ---- En-tetes de securite (sans impact SEO, bonnes pratiques) ----
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ============================================================
+# OPTIONNEL - Canonicalisation des URLs (HTTPS + non-www + /index.html)
+# A n'activer QUE si le site tourne sur Apache et APRES verification
+# qu'aucun proxy/hebergeur ne gere deja ces redirections (risque de
+# boucle). Retirer les "#" pour activer, puis tester chaque variante.
+# ------------------------------------------------------------
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   # Forcer HTTPS
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#   # Forcer non-www
+#   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#   RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+#   # /index.html -> / (evite le doublon accueil)
+#   RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+#   RewriteRule ^index\.html$ / [L,R=301]
+# </IfModule>

@@ -36,6 +36,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
+<link rel="preload" as="image" href="images/fond-arriere.webp" type="image/webp" fetchpriority="high" />
+
 <link rel="stylesheet" href="css/style-mobile.css" />
 <link rel="stylesheet" href="css/style-desktop.css" media="(min-width: 1024px)" />
 
@@ -49,9 +51,14 @@
       "name": "LP Beauty Nails",
       "alternateName": "LP Beauty Nails Strasbourg",
       "description": "Salon de beauté des ongles à Strasbourg Koenigshoffen, spécialisé en pose résine acrylique, french manucure, semi-permanent et pédicure.",
-      "image": "https://lpbeautynails.fr/images/logo.png",
-      "logo": "https://lpbeautynails.fr/images/logo.png",
+      "image": [
+        "https://lpbeautynails.fr/images/img1.jpg",
+        "https://lpbeautynails.fr/images/img2.jpeg",
+        "https://lpbeautynails.fr/images/img4.jpeg"
+      ],
+      "logo": { "@type": "ImageObject", "url": "https://lpbeautynails.fr/images/logo.png", "width": 435, "height": 378 },
       "url": "https://lpbeautynails.fr/",
+      "hasMap": "https://www.google.com/maps?q=44+Route+des+Romains+67200+Strasbourg",
       "telephone": "+33662995900",
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
@@ -144,11 +151,11 @@
 <!-- Navigation -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="LP Beauty Nails - accueil">
-      <img src="images/logo.png" alt="LP Beauty Nails - Prothésiste ongulaire à Strasbourg" width="180" height="180" loading="eager" fetchpriority="high" />
+    <a href="/" class="nav-logo" aria-label="LP Beauty Nails - accueil">
+      <img src="images/logo.png" alt="LP Beauty Nails - Prothésiste ongulaire à Strasbourg" width="435" height="378" loading="eager" fetchpriority="high" />
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-      <a href="index.html" class="nav-link active">Accueil</a>
+      <a href="/" class="nav-link active">Accueil</a>
       <a href="services.html" class="nav-link">Prestations</a>
       <a href="realisations.html" class="nav-link">Réalisations</a>
       <a href="a-propos.html" class="nav-link">À propos</a>
@@ -166,7 +173,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
-    <div class="hero-bg-img" style="background-image:url('images/fond-arriere.png')"></div>
+    <div class="hero-bg-img" style="background-image:url('images/fond-arriere.webp')"></div>
     <div class="hero-vignette"></div>
   </div>
   <div class="hero-content">
@@ -230,7 +237,7 @@
       <a href="https://www.cal.eu/lpbeautynails" target="_blank" rel="noopener" class="btn btn-primary">Profiter de l'offre</a>
     </div>
     <div class="offer-media reveal">
-      <img src="images/offre-lancement.png" alt="Offre de lancement LP Beauty Nails - pose complète 40€, remplissage 35€, combo mains + pieds 70€" loading="lazy" />
+      <picture><source srcset="images/offre-lancement.webp" type="image/webp" /><img src="images/offre-lancement.png" alt="Offre de lancement LP Beauty Nails - pose complète 40€, remplissage 35€, combo mains + pieds 70€" width="1024" height="1536" loading="lazy" /></picture>
     </div>
   </div>
 </section>
@@ -239,7 +246,7 @@
 <section class="section about" id="about">
   <div class="container about-grid">
     <div class="about-media reveal">
-      <div class="about-img" style="background-image:url('images/img4.jpeg')"></div>
+      <div class="about-img" style="background-image:url('images/img4.webp')"></div>
       <div class="about-badge">
         <span class="badge-num">LP</span>
         <span class="badge-txt">Prothésiste ongulaire<br />Strasbourg Koenigshoffen</span>
@@ -321,7 +328,7 @@
       <a href="https://www.cal.eu/lpbeautynails" target="_blank" rel="noopener" class="btn btn-primary">Prendre rendez-vous</a>
     </div>
     <div class="loyalty-media reveal">
-      <img src="images/carte-fidelite.png" alt="Carte de fidélité LP Beauty Nails - -5€ tous les 5 soins" loading="lazy" />
+      <picture><source srcset="images/carte-fidelite.webp" type="image/webp" /><img src="images/carte-fidelite.png" alt="Carte de fidélité LP Beauty Nails - -5€ tous les 5 soins" width="1050" height="600" loading="lazy" /></picture>
     </div>
   </div>
 </section>
@@ -336,19 +343,19 @@
 
     <div class="gallery-grid">
       <a href="realisations.html" class="gallery-item gallery-item-tall reveal">
-        <img src="images/img1.jpg" alt="Pose résine acrylique longue, nail art noir blanc argenté - LP Beauty Nails Strasbourg" loading="lazy" />
+        <picture><source srcset="images/img1.webp" type="image/webp" /><img src="images/img1.jpg" alt="Pose résine acrylique longue, nail art noir blanc argenté - LP Beauty Nails Strasbourg" width="1560" height="1170" loading="lazy" /></picture>
         <span class="gallery-tag">Nail art résine</span>
       </a>
       <a href="realisations.html" class="gallery-item reveal">
-        <img src="images/img2.jpeg" alt="French manucure carrée courte blanche - LP Beauty Nails" loading="lazy" />
+        <picture><source srcset="images/img2.webp" type="image/webp" /><img src="images/img2.jpeg" alt="French manucure carrée courte blanche - LP Beauty Nails" width="878" height="1560" loading="lazy" /></picture>
         <span class="gallery-tag">French courte</span>
       </a>
       <a href="realisations.html" class="gallery-item reveal">
-        <img src="images/img6.png" alt="Pose résine amande nude rose - LP Beauty Nails Koenigshoffen" loading="lazy" />
+        <picture><source srcset="images/img6.webp" type="image/webp" /><img src="images/img6.png" alt="Pose résine amande nude rose - LP Beauty Nails Koenigshoffen" width="1086" height="1448" loading="lazy" /></picture>
         <span class="gallery-tag">Amande nude</span>
       </a>
       <a href="realisations.html" class="gallery-item gallery-item-wide reveal">
-        <img src="images/img4.jpeg" alt="Combo mains et pieds blanc nacré - LP Beauty Nails Strasbourg" loading="lazy" />
+        <picture><source srcset="images/img4.webp" type="image/webp" /><img src="images/img4.jpeg" alt="Combo mains et pieds blanc nacré - LP Beauty Nails Strasbourg" width="878" height="1560" loading="lazy" /></picture>
         <span class="gallery-tag">Combo mains + pieds</span>
       </a>
     </div>
@@ -418,8 +425,8 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-col footer-brand">
-      <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="LP Beauty Nails - Salon de beauté des ongles Strasbourg" width="180" height="180" loading="lazy" />
+      <a href="/" class="nav-logo">
+        <img src="images/logo.png" alt="LP Beauty Nails - Salon de beauté des ongles Strasbourg" width="435" height="378" loading="lazy" />
       </a>
       <p>Salon de beauté des ongles à Strasbourg Koenigshoffen. Résine acrylique, french, semi-permanent &amp; pédicure.</p>
       <div class="socials">
@@ -431,7 +438,7 @@
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="/">Accueil</a></li>
         <li><a href="services.html">Prestations</a></li>
         <li><a href="realisations.html">Réalisations</a></li>
         <li><a href="a-propos.html">À propos</a></li>

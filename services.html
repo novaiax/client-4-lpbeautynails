@@ -88,6 +88,47 @@
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lpbeautynails.fr/" },
         { "@type": "ListItem", "position": 2, "name": "Prestations", "item": "https://lpbeautynails.fr/services.html" }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lpbeautynails.fr/services.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Où se trouve le salon LP Beauty Nails ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le salon est situé au 44 Route des Romains, 67200 Strasbourg, dans le quartier de Koenigshoffen. Il est accessible en tram et facilement en voiture." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sont les horaires d'ouverture ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "LP Beauty Nails est ouvert du lundi au samedi, de 9h à 18h. Le salon est fermé le dimanche." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la spécialité du salon ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La pose en résine acrylique, plus solide et durable que le gel classique, idéale pour des extensions personnalisées. Le salon propose aussi la french manucure, le semi-permanent et la pédicure." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment prendre rendez-vous ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez réserver en ligne 24h/24 via Cal.com, ou appeler directement le salon au 06 62 99 59 00." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une pose complète en résine ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Une pose complète naturelle débute à 40 €, et une pose french ou couleur à 50 €. Le remplissage démarre à 30 €. Les tarifs détaillés sont indiqués sur cette page." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous une carte de fidélité ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, une carte de fidélité vous offre -5 € tous les 5 soins." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels moyens de paiement sont acceptés ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le salon accepte les espèces et la carte bancaire." }
+        }
+      ]
     }
   ]
 }
@@ -107,11 +148,11 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="LP Beauty Nails - accueil">
-      <img src="images/logo.png" alt="LP Beauty Nails - Prothésiste ongulaire à Strasbourg" width="180" height="180" loading="eager" fetchpriority="high" />
+    <a href="/" class="nav-logo" aria-label="LP Beauty Nails - accueil">
+      <img src="images/logo.png" alt="LP Beauty Nails - Prothésiste ongulaire à Strasbourg" width="435" height="378" loading="eager" fetchpriority="high" />
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="/" class="nav-link">Accueil</a>
       <a href="services.html" class="nav-link active">Prestations</a>
       <a href="realisations.html" class="nav-link">Réalisations</a>
       <a href="a-propos.html" class="nav-link">À propos</a>
@@ -128,14 +169,14 @@
 
 <!-- PAGE HEADER -->
 <section class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('images/img2.jpeg')"></div>
+  <div class="page-hero-bg" style="background-image:url('images/img2.webp')"></div>
   <div class="page-hero-overlay"></div>
   <div class="container page-hero-content">
     <span class="eyebrow eyebrow-light reveal"><span class="line"></span>Prestations</span>
     <h1 class="page-title reveal">Une carte <em>complète</em>,<br />des tarifs <em>transparents</em>.</h1>
     <p class="page-sub reveal">Toutes les prestations du salon LP Beauty Nails - manucure, pédicure, suppléments. Spécialité : résine acrylique.</p>
     <nav class="breadcrumb reveal" aria-label="Fil d'ariane">
-      <a href="index.html">Accueil</a> <span>/</span> <span>Prestations</span>
+      <a href="/">Accueil</a> <span>/</span> <span>Prestations</span>
     </nav>
   </div>
 </section>
@@ -144,7 +185,7 @@
 <section class="section service-detail" id="manucure">
   <div class="container service-row">
     <div class="service-media reveal">
-      <img src="images/img2.jpeg" alt="French manucure résine - LP Beauty Nails Strasbourg" loading="lazy" />
+      <picture><source srcset="images/img2.webp" type="image/webp" /><img src="images/img2.jpeg" alt="French manucure résine - LP Beauty Nails Strasbourg" width="878" height="1560" loading="lazy" /></picture>
     </div>
     <div class="service-info">
       <span class="eyebrow eyebrow-dark reveal"><span class="line"></span>01 - Manucure</span>
@@ -167,7 +208,7 @@
 <section class="section service-detail service-detail-alt" id="pedicure">
   <div class="container service-row service-row-reverse">
     <div class="service-media reveal">
-      <img src="images/img4.jpeg" alt="Pédicure semi-permanent blanc - LP Beauty Nails Koenigshoffen" loading="lazy" />
+      <picture><source srcset="images/img4.webp" type="image/webp" /><img src="images/img4.jpeg" alt="Pédicure semi-permanent blanc - LP Beauty Nails Koenigshoffen" width="878" height="1560" loading="lazy" /></picture>
     </div>
     <div class="service-info">
       <span class="eyebrow eyebrow-dark reveal"><span class="line"></span>02 - Pédicure</span>
@@ -185,7 +226,7 @@
 <section class="section service-detail" id="supplements">
   <div class="container service-row">
     <div class="service-media reveal">
-      <img src="images/img7.jpeg" alt="Pose résine acrylique avec finitions - LP Beauty Nails Strasbourg" loading="lazy" />
+      <picture><source srcset="images/img7.webp" type="image/webp" /><img src="images/img7.jpeg" alt="Pose résine acrylique avec finitions - LP Beauty Nails Strasbourg" width="1164" height="2134" loading="lazy" /></picture>
     </div>
     <div class="service-info">
       <span class="eyebrow eyebrow-dark reveal"><span class="line"></span>03 - Suppléments</span>
@@ -209,7 +250,7 @@
   <div class="container">
     <div class="offer-banner-card reveal">
       <div class="offer-banner-img">
-        <img src="images/offre-lancement.png" alt="Offre de lancement LP Beauty Nails - pose 40€, remplissage 35€, combo 70€" loading="lazy" />
+        <picture><source srcset="images/offre-lancement.webp" type="image/webp" /><img src="images/offre-lancement.png" alt="Offre de lancement LP Beauty Nails - pose 40€, remplissage 35€, combo 70€" width="1024" height="1536" loading="lazy" /></picture>
       </div>
       <div class="offer-banner-text">
         <span class="eyebrow eyebrow-light"><span class="line"></span>Offre de lancement</span>
@@ -222,6 +263,46 @@
         </ul>
         <a href="https://www.cal.eu/lpbeautynails" target="_blank" rel="noopener" class="btn btn-primary">Profiter de l'offre</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow eyebrow-dark reveal"><span class="line"></span>Questions fréquentes</span>
+      <h2 class="section-title reveal" id="faq-title">Tout ce qu'il faut <em>savoir</em>.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Où se trouve le salon LP Beauty Nails ?</summary>
+        <div class="faq-answer"><p>Le salon est situé au 44 Route des Romains, 67200 Strasbourg, dans le quartier de Koenigshoffen. Il est accessible en tram et facilement en voiture.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Quels sont les horaires d'ouverture ?</summary>
+        <div class="faq-answer"><p>LP Beauty Nails est ouvert du lundi au samedi, de 9h à 18h. Le salon est fermé le dimanche.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Quelle est la spécialité du salon ?</summary>
+        <div class="faq-answer"><p>La pose en résine acrylique, plus solide et durable que le gel classique, idéale pour des extensions personnalisées. Le salon propose aussi la french manucure, le semi-permanent et la pédicure.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Comment prendre rendez-vous ?</summary>
+        <div class="faq-answer"><p>Vous pouvez réserver en ligne 24h/24 via Cal.com, ou appeler directement le salon au 06 62 99 59 00.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Combien coûte une pose complète en résine ?</summary>
+        <div class="faq-answer"><p>Une pose complète naturelle débute à 40 €, et une pose french ou couleur à 50 €. Le remplissage démarre à 30 €. Les tarifs détaillés sont indiqués sur cette page.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Proposez-vous une carte de fidélité ?</summary>
+        <div class="faq-answer"><p>Oui, une carte de fidélité vous offre -5 € tous les 5 soins.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Quels moyens de paiement sont acceptés ?</summary>
+        <div class="faq-answer"><p>Le salon accepte les espèces et la carte bancaire.</p></div>
+      </details>
     </div>
   </div>
 </section>
@@ -245,8 +326,8 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-col footer-brand">
-      <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="LP Beauty Nails - Salon de beauté des ongles Strasbourg" width="180" height="180" loading="lazy" />
+      <a href="/" class="nav-logo">
+        <img src="images/logo.png" alt="LP Beauty Nails - Salon de beauté des ongles Strasbourg" width="435" height="378" loading="lazy" />
       </a>
       <p>Salon de beauté des ongles à Strasbourg Koenigshoffen. Résine acrylique, french, semi-permanent &amp; pédicure.</p>
       <div class="socials">
@@ -258,7 +339,7 @@
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="/">Accueil</a></li>
         <li><a href="services.html">Prestations</a></li>
         <li><a href="realisations.html">Réalisations</a></li>
         <li><a href="a-propos.html">À propos</a></li>
